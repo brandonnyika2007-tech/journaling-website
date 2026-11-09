@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Trading Journal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h2>FOREX JOURNAL</h2>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#trades">My Trades</a>
+            <a href="#analytics">Analytics</a>
+            <a href="#calendar">Trading Calendar</a>
+            <a href="#ict">ICT Analysis</a>
+            <a href="#settings">Settings</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Trading Dashboard</h1>
+                <p>Track. Analyse. Improve.</p>
+            </div>
+            <span class="status">● Journal Active</span>
+        </header>
+
+        <section id="dashboard">
+
+            <h2>Performance Overview</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <p>Total Trades</p>
+                    <h2 id="totalTrades">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Winning Trades</p>
+                    <h2 id="winningTrades">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Win Rate</p>
+                    <h2 id="winRate">0%</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Net Profit/Loss</p>
+                    <h2 id="netProfit">$0.00</h2>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="trades" class="panel">
+            <div class="section-heading">
+                <h2>Record a Trade</h2>
+            </div>
+
+            <form id="tradeForm">
+
+                <div class="form-grid">
+
+                    <label>
+                        Currency Pair
+                        <input type="text" id="pair"
+                        placeholder="EURUSD" required>
+                    </label>
+
+                    <label>
+                        Trade Direction
+                        <select id="direction" required>
+                            <option value="Buy">Buy</option>
+                            <option value="Sell">Sell</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Entry Price
+                        <input type="number" id="entry"
+                        step="any" required>
+                    </label>
+
+                    <label>
+                        Exit Price
+                        <input type="number" id="exit"
+                        step="any" required>
+                    </label>
+
+                    <label>
+                        Profit or Loss ($)
+                        <input type="number" id="profit"
+                        step="any" required>
+                    </label>
+
+                    <label>
+                        Trade Result
+                        <select id="result">
+                            <option value="Win">Win</option>
+                            <option value="Loss">Loss</option>
+                            <option value="Breakeven">Breakeven</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Trade Date
+                        <input type="date" id="tradeDate" required>
+                    </label>
+
+                    <label>
+                        Timeframe
+                        <select id="timeframe">
+                            <option value="1M">1 Minute</option>
+                            <option value="5M">5 Minutes</option>
+                            <option value="15M">15 Minutes</option>
+                            <option value="1H">1 Hour</option>
+                            <option value="4H">4 Hours</option>
+                            <option value="1D">Daily</option>
+                        </select>
+                    </label>
+
+                </div>
+
+                <label>
+                    Trade Notes
+                    <textarea id="notes"
+                    placeholder="Why did you enter this trade?"></textarea>
+                </label>
+
+                <button type="submit">Save Trade</button>
+
+            </form>
+        </section>
+
+        <section id="analytics" class="panel">
+            <h2>Performance Analytics</h2>
+            <p>Your trading performance will be displayed here.</p>
+            <div id="analyticsContent"></div>
+        </section>
+
+        <section id="calendar" class="panel">
+            <h2>Trading Calendar</h2>
+            <p>Review your trading activity by date.</p>
+            <div id="calendarContent"></div>
+        </section>
+
+        <section id="ict" class="panel">
+            <h2>ICT Trade Analysis</h2>
+
+            <div class="form-grid">
+
+                <label>
+                    Market Structure
+                    <select id="marketStructure">
+                        <option>Bullish</option>
+                        <option>Bearish</option>
+                        <option>Consolidation</option>
+                    </select>
+                </label>
+
+                <label>
+                    Liquidity
+                    <select id="liquidity">
+                        <option>Buy Side Liquidity</option>
+                        <option>Sell Side Liquidity</option>
+                        <option>Both</option>
+                        <option>None</option>
+                    </select>
+                </label>
+
+                <label>
+                    Entry Model
+                    <select id="entryModel">
+                        <option>Fair Value Gap</option>
+                        <option>Order Block</option>
+                        <option>Breaker Block</option>
+                        <option>Mitigation Block</option>
+                        <option>Other</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <p>Use these fields to document the ICT concepts behind your trades.</p>
+        </section>
+
+        <section id="settings" class="panel">
+            <h2>Settings</h2>
+            <p>Journal preferences and account settings will appear here.</p>
+        </section>
+
+        <footer>
+            <p>Forex Trading Journal | Trade with discipline.</p>
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
